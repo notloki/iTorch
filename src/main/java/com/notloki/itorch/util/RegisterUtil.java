@@ -1,6 +1,6 @@
 package com.notloki.itorch.util;
 
-import com.notloki.itorch.init.Blocks;
+import com.notloki.itorch.blocks.BlockITorch;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -16,20 +16,40 @@ import java.util.List;
 @Mod.EventBusSubscriber
 public class RegisterUtil {
 
-    public static List getBlock() {
+    private static List<Block> blocks = new ArrayList<>();
+
+    public static void getBlock() {
         List<Block> blocks = new ArrayList<>();
-        Collections.addAll(blocks, Blocks.iTorch, Blocks.iTorchBlack, Blocks.iTorchBlue, Blocks.iTorchBrown, Blocks.iTorchCyan, Blocks.iTorchGray, Blocks.iTorchGreen,
-                Blocks.iTorchLightBlue, Blocks.iTorchLightGray, Blocks.iTorchLime, Blocks.iTorchMagenta, Blocks.iTorchOrange, Blocks.iTorchPink, Blocks.iTorchPurple,
-                Blocks.iTorchRed, Blocks.iTorchWhite);
-        return blocks;
+        Collections.addAll(blocks,
+                new BlockITorch("i_torch",            "yellow"),
+                new BlockITorch("i_torch_blue",       "blue"),
+                new BlockITorch("i_torch_white",      "white"),
+                new BlockITorch("i_torch_green",      "green"),
+                new BlockITorch("i_torch_black",      "black"),
+                new BlockITorch("i_torch_red",        "red"),
+                new BlockITorch("i_torch_gray",       "gray"),
+                new BlockITorch("i_torch_lime",       "lime"),
+                new BlockITorch("i_torch_cyan",       "cyan"),
+                new BlockITorch("i_torch_brown",      "brown"),
+                new BlockITorch("i_torch_purple",     "purple"),
+                new BlockITorch("i_torch_pink",       "pink"),
+                new BlockITorch("i_torch_orange",     "orange"),
+                new BlockITorch("i_torch_magenta",    "magenta"),
+                new BlockITorch("i_torch_light_blue", "light_blue"),
+                new BlockITorch("i_torch_light_gray", "light_gray"));
+        RegisterUtil.blocks = blocks;
 
     }
 
+
+
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
-        List<Block> blocks = getBlock();
+        getBlock();
+        List<Block> blocks = RegisterUtil.blocks;
         for (Block block : blocks) {
-            // System.out.println("Registering :" + block.getRegistryName().toString());
+
+            System.out.println("Registering :" + block.getRegistryName().toString());
             event.getRegistry().register(block);
         }
     }
@@ -37,7 +57,7 @@ public class RegisterUtil {
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
-        List<Block> blocks = getBlock();
+        List<Block> blocks = RegisterUtil.blocks;
 
         for (Block block : blocks) {
             event.getRegistry().register(new ItemBlock(block).setRegistryName(block.getRegistryName()));

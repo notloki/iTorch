@@ -1,4 +1,4 @@
 # iTorch
 
 
-Please add any issues in #issues
+iTorch is my first mod and first Java program.
