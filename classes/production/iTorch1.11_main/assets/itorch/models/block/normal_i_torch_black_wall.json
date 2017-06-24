@@ -1,0 +1,6 @@
+{
+  "parent": "block/torch_wall",
+  "textures": {
+    "torch": "itorch:blocks/i_torch_black_on"
+  }
+}

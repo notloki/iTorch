@@ -1,0 +1,6 @@
+{
+  "parent": "block/torch",
+  "textures": {
+    "torch": "itorch:blocks/i_torch_brown_on"
+  }
+}

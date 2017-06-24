@@ -1,0 +1,23 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:torch"
+    },
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "dyeGray"
+    }
+  },
+  "result": {
+    "item": "itorch:i_torch_gray",
+    "count": 8
+  }
+}
+
+
