@@ -1,6 +1,7 @@
 package com.notloki.itorch.init;
 
 import com.notloki.itorch.Ref;
+import com.notloki.itorch.blocks.BlockCavingFlare;
 import net.minecraft.block.Block;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -23,6 +24,6 @@ public class Blocks {
         public static final Block I_TORCH_LIGHT_BLUE = null;
         public static final Block I_TORCH_LIGHT_GRAY = null;
 
-    // public static final Block cavingFlare = new BlockCavingFlare("caving_flare");
+        public static final Block cavingFlare = null;
 }
 

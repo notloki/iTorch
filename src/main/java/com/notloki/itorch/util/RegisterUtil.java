@@ -1,5 +1,6 @@
 package com.notloki.itorch.util;
 
+import com.notloki.itorch.blocks.BlockCavingFlare;
 import com.notloki.itorch.blocks.BlockITorch;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -36,7 +37,10 @@ public class RegisterUtil {
                 new BlockITorch("i_torch_orange",     "orange"),
                 new BlockITorch("i_torch_magenta",    "magenta"),
                 new BlockITorch("i_torch_light_blue", "light_blue"),
-                new BlockITorch("i_torch_light_gray", "light_gray"));
+                new BlockITorch("i_torch_light_gray", "light_gray"),
+
+                new BlockCavingFlare("caving_flare"));
+
         RegisterUtil.blocks = blocks;
 
     }
