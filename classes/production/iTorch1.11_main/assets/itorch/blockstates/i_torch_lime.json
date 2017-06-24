@@ -1,9 +1,0 @@
-{
-  "variants": {
-    "facing=up": { "model": "itorch:normal_i_torch_lime" },
-    "facing=east": { "model": "itorch:normal_i_torch_lime_wall" },
-    "facing=south": { "model": "itorch:normal_i_torch_lime_wall", "y": 90 },
-    "facing=west": { "model": "itorch:normal_i_torch_lime_wall", "y": 180 },
-    "facing=north": { "model": "itorch:normal_i_torch_lime_wall", "y": 270 }
-  }
-}

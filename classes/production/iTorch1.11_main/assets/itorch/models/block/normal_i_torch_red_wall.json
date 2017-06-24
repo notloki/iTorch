@@ -1,6 +1,0 @@
-{
-  "parent": "block/torch_wall",
-  "textures": {
-    "torch": "itorch:blocks/i_torch_red_on"
-  }
-}

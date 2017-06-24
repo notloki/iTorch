@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "itorch:blocks/i_torch_blue_on"
-  }
-}
