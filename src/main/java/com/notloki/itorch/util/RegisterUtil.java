@@ -16,7 +16,9 @@ import java.util.List;
 @Mod.EventBusSubscriber
 public class RegisterUtil {
 
-    public static List getBlock() {
+    private static List<Block> blocks = new ArrayList<>();
+
+    public static void getBlock() {
         List<Block> blocks = new ArrayList<>();
         Collections.addAll(blocks,
                 new BlockITorch("i_torch",            "yellow"),
@@ -35,13 +37,16 @@ public class RegisterUtil {
                 new BlockITorch("i_torch_magenta",    "magenta"),
                 new BlockITorch("i_torch_light_blue", "light_blue"),
                 new BlockITorch("i_torch_light_gray", "light_gray"));
-        return blocks;
+        RegisterUtil.blocks = blocks;
 
     }
 
+
+
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
-        List<Block> blocks = getBlock();
+        getBlock();
+        List<Block> blocks = RegisterUtil.blocks;
         for (Block block : blocks) {
 
             System.out.println("Registering :" + block.getRegistryName().toString());
@@ -52,7 +57,7 @@ public class RegisterUtil {
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
-        List<Block> blocks = getBlock();
+        List<Block> blocks = RegisterUtil.blocks;
 
         for (Block block : blocks) {
             event.getRegistry().register(new ItemBlock(block).setRegistryName(block.getRegistryName()));
