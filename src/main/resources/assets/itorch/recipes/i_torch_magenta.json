@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:torch",
+      "data": 0
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "dyeMagenta"
+    }
+  ],
+  "result": {
+    "item": "itorch:i_torch_magenta",
+    "data": 0
+  }
+}
