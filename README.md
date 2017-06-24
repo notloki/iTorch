@@ -1,4 +1,4 @@
 # iTorch
 
 
-This branch is probably broken and most likely won't even compile as it is a work in progress.
+iTorch is my first mod and first Java program.
