@@ -37,6 +37,7 @@ public class RegisterUtil {
                 new BlockITorch("i_torch_magenta",    "magenta"),
                 new BlockITorch("i_torch_light_blue", "light_blue"),
                 new BlockITorch("i_torch_light_gray", "light_gray"));
+
         RegisterUtil.blocks = blocks;
 
     }

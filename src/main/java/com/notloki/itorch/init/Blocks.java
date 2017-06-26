@@ -23,6 +23,5 @@ public class Blocks {
         public static final Block I_TORCH_LIGHT_BLUE = null;
         public static final Block I_TORCH_LIGHT_GRAY = null;
 
-    // public static final Block cavingFlare = new BlockCavingFlare("caving_flare");
 }
 
