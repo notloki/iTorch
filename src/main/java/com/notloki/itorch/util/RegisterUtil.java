@@ -9,6 +9,9 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -62,6 +65,15 @@ public class RegisterUtil {
 
         for (Block block : blocks) {
             event.getRegistry().register(new ItemBlock(block).setRegistryName(block.getRegistryName()));
+        }
+    }
+
+    @SubscribeEvent
+    @SideOnly(Side.CLIENT)
+    public static void registerItemBlocks(RegistryEvent<Item> event) {
+        List<Block> blocks = RegisterUtil.blocks;
+
+        for (Block block : blocks) {
 
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0,
                     new ModelResourceLocation(
