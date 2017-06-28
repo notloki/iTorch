@@ -25,19 +25,18 @@ public class ITorch {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        LOGGER.info("Starting Pre-Inititalization...");
+        LOGGER.info("iTorch is in the house");
+        LOGGER.info("---Adding Torches---");
         proxy.preInit(event);
     }
 
     @Mod.EventHandler
     public void Init(FMLInitializationEvent event) {
-        LOGGER.info("Stating Initialization...");
         proxy.init(event);
     }
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
-        LOGGER.info("Starting Post-Initialization...");
         proxy.postInit(event);
 
     }

@@ -53,7 +53,7 @@ public class RegisterUtil {
         List<Block> blocks = RegisterUtil.blocks;
         for (Block block : blocks) {
 
-            System.out.println("Registering :" + block.getRegistryName().toString());
+            // System.out.println("Registering :" + block.getRegistryName().toString());
             event.getRegistry().register(block);
         }
     }
