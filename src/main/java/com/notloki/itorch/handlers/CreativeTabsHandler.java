@@ -7,7 +7,7 @@ import static net.minecraft.init.Blocks.TORCH;
 
 public class CreativeTabsHandler {
 
-    public static final CreativeTabs iTorchTab = new CreativeTabs("iTorch") {
+    public static final CreativeTabs iTorchTab = new CreativeTabs("i_torch") {
 
         @Override
         public ItemStack getTabIconItem() {return new ItemStack(Item.getItemFromBlock(TORCH));}

@@ -14,3 +14,4 @@ tile.i_torch_pink.name=iTorch Pink
 tile.i_torch_purple.name=iTorch Purple
 tile.i_torch_red.name=iTorch Red
 tile.i_torch_white.name=iTorch White
+itemGroup.i_torch=iTorch
