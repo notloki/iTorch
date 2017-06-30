@@ -7,7 +7,6 @@ import com.notloki.itorch.handlers.CreativeTabsHandler;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
-import net.minecraft.block.state.BlockFaceShape;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
@@ -270,9 +269,9 @@ public class BlockITorch extends BlockBase {
         return new BlockStateContainer(this, new IProperty[]{FACING});
     }
 
-    public BlockFaceShape func_193383_a(IBlockAccess p_193383_1_, IBlockState p_193383_2_, BlockPos p_193383_3_, EnumFacing p_193383_4_) {
-        return BlockFaceShape.UNDEFINED;
-    }
+//    public BlockFaceShape func_193383_a(IBlockAccess p_193383_1_, IBlockState p_193383_2_, BlockPos p_193383_3_, EnumFacing p_193383_4_) {
+//        return BlockFaceShape.UNDEFINED;
+//    }
 
     @Override
     public Item getItemDropped(IBlockState state, Random rand, int fortune) {

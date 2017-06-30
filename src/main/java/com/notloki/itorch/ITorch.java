@@ -10,7 +10,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 
-@Mod(modid=Ref.MODID, name=Ref.NAME, version=Ref.VERSION, dependencies = Ref.DEPEND)
+@Mod(modid=Ref.MODID, name=Ref.NAME, version=Ref.VERSION)
 
 public class ITorch {
 
